@@ -3,6 +3,9 @@ $purple__hover: #535af1;
 .sidebar {
     height: 100%;
     padding: 16px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-search {
@@ -158,6 +161,13 @@ $purple__hover: #535af1;
     margin-top: 18px;
 }
 
+.sidebar__section {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar__headsection {
     display: flex;
     justify-content: space-between;
@@ -219,11 +229,26 @@ $purple__hover: #535af1;
 
 .only__channels {
     margin-bottom: 40px;
+    flex: 0 0 auto;
 }
 
 .only__channels .channel__selection {
     min-height: 100px;
     height: auto;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.only__chats {
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.only__chats .channel__selection {
+    min-height: 0;
+    flex: 1;
     overflow-y: auto;
     padding-right: 4px;
 }
