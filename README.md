@@ -35,12 +35,23 @@ http://localhost:4200
 - Tests: `npm test`
 - Build: `npm run build`
 - Pflichtcheck vor Deploy: `npm run predeploy:check`
-- Deployment: `firebase deploy`
+- Cloudflare Preview Deploy: `npm run deploy:cloudflare:preview`
+- Cloudflare Production Deploy: `npm run deploy:cloudflare`
+- Voller Release-Flow: `npm run release`
 
-## Deployment-Standard
+## Deployment-Standard (Cloudflare Pages)
 
 Vor jedem Deployment muessen ausgefuehrt werden:
 
 1. `npm run predeploy:check`
 2. Manuelle UI-Pruefung gemaess [docs/predeploy-manual-checklist.md](docs/predeploy-manual-checklist.md)
-3. `firebase deploy`
+3. `npm run deploy:cloudflare`
+
+## Ziel-URLs
+
+- Production: `https://dabubble2498.pages.dev`
+- Custom Domain: `https://dabubble.dannygruchmann.com`
+
+Hinweis:
+- Die URL `https://<hash>.dabubble2498.pages.dev` ist ein Preview-Deploy und kann sich pro Deployment aendern.
+- Fuer den stabilen Live-Link immer `https://dabubble2498.pages.dev` (oder die Custom Domain) verwenden.
